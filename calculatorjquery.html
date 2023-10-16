@@ -1,0 +1,133 @@
+<html >
+<head>
+<title> **MATHEMATICAL CALCULATOR**  </title> 
+<style>
+*{ 
+margin: 0;
+padding: 0; outline: none;
+box-sizing: border-box;
+}
+body{
+font-family: montserrat; display: flex;
+text-align: center; justify-content: center; align-items: center; min-height: 100vh;
+}
+.center{
+width: 500px;
+height:600px;
+padding:70px;
+background: black; 
+border-radius: 20px;           //calculator size// 
+}
+input[type="text"]{ height: 50px; width: 370px; margin-top: 10px; border-radius: 5px;    //calculator screen//
+border: 1px solid #e1e7ea; color: black;
+font-size: 22px; font-weight: bold; text-align: right;
+padding-right: 20px;
+background: linear-gradient(grey,white);
+}
+.buttons{ width: 300px;
+margin: 25px;
+
+}
+input[type="button"]{ width: 52px;
+height: 60px; margin: 1px; font-size: 20px;
+line-height: 45px; border-radius: 1px;               //button//
+border: 1px solid #d9d9d9;
+background: linear-gradient(grey, white);
+}
+input[type="button"]:hover{ transition: .5s;
+
+}
+#clear{ background: red;width:285px;margin: 5px 0;             //clear//
+border: 5px; color: orange;
+}
+#equal{ width: 285px;
+margin: 3px; font-size: 30px;                                       //equal//
+color: white; background: orange;
+border: 5px solid red;
+}
+</style>
+<meta charset="utf-8">
+<title>Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<div class="center">
+<form name="forms">
+<input type="text" id="display" name="display" disabled>
+<div class="buttons">
+<input type="button" id="seven" value="7">
+<input type="button" id="eight" value="8">
+<input type="button" id="nine" value="9">
+<input type="button" id="divide" value="/">
+<input type="button" id="divide" value="%"><br>
+
+<input type="button" id="four" value="4">
+<input type="button" id="five" value="5">
+<input type="button" id="six" value="6">
+<input type="button" id="multi" value="*">
+<input type="button" id="divide" value="%%"><br>
+
+<input type="button" id="one" value="1">
+<input type="button" id="two" value="2">
+<input type="button" id="three" value="3">
+<input type="button" id="subs" value="-">
+<input type="button" id="divide" value="TAX+"><br>
+
+<input type="button" id="dot" value=".">
+<input type="button" id="zero" value="0">
+<input type="button" id="zerozero" value="00">
+<input type="button" id="add" value="+">
+<input type="button" id="divide" value="TAX-"><br>
+<input type="button" id="clear" value="C"><br>
+<input type="button" id="equal" value="="><br>
+</div>
+</form>
+</div>
+<script>
+$(document).ready(function(){
+$('#one').click(function(){ document.forms.display.value += 1;
+});
+$('#two').click(function(){ document.forms.display.value += 2;
+});
+$('#three').click(function(){ document.forms.display.value += 3;
+});
+$('#four').click(function(){ document.forms.display.value += 4;
+});
+$('#five').click(function(){ document.forms.display.value += 5;
+});
+$('#six').click(function(){ document.forms.display.value += 6;
+});
+$('#seven').click(function(){ document.forms.display.value += 7;
+});
+$('#eight').click(function(){ document.forms.display.value += 8;
+});
+$('#nine').click(function(){
+document.forms.display.value += 9;
+});
+$('#zero').click(function(){ document.forms.display.value += 0;
+});
+$('#zerozero').click(function(){ document.forms.display.value += 00;
+});
+$('#add').click(function(){ document.forms.display.value += '+';
+});
+$('#subs').click(function(){ document.forms.display.value += '-';
+});
+$('#multi').click(function(){ document.forms.display.value += '*';
+});
+$('#divide').click(function(){ document.forms.display.value += '/';
+});
+$('#taxplus').click(function(){ document.forms.display.value*0.5+100;
+});
+$('#taxminus').click(function(){ document.forms.display.value*100/0.5;
+});
+$('#dot').click(function(){ document.forms.display.value += '.';});
+$('#equal').click(function(){ if (display.value == "") {
+alert("Please enter any numbers to calculate!");
+}else{ document.forms.display.value =
+eval(document.forms.display.value);}
+}) $('#clear').click(function(){ document.forms.display.value = "";
+});	})
+</script> </body></html>
+

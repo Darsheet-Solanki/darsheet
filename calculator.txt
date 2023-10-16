@@ -1,0 +1,41 @@
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+Enter Number 1<input type="text" id="1"><br>
+Enter Number 2<input type="text" id="2"><br>
+<button id="add">Add</button><button id="sub">Subtract</button><button id="div">Divide</button><button id="x">Multiply</button> <br>
+<script>
+$(document).ready( function(){
+$("#add").click(function(){ addition(); });
+$("#sub").click(function(){ substraction(); });
+$("#div").click(function(){ division(); });
+$("#x").click(function(){ multiplication(); });
+});
+function addition(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a+b;
+alert("Sum of Numbers=" + c);
+}
+function substraction(){
+var a = parseInt($("#1").val());
+
+
+var b= parseInt($("#2").val());
+var c = a-b;
+alert("Difference of Numbers=" + c);
+}
+function division(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a/b;
+alert("Division of Numbers=" + c);	
+}
+function multiplication(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a*b;
+alert("Multiplication of Numbers=" + c);
+}
+</script>
+</body>
+</html>

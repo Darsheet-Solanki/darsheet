@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+Number 1:<input type="text" id="1" name="Enter Number 1" value="Enter Number 1"><br><br>
+Number 2:<input type="text" id="2" name="Enter Number 2" value="Enter Number 2"><br><br>
+
+Addition of Number 1 and Number 2:-<br><input type="button" id="add" value="Addition"><br>
+Subtraction of Number 1 and Number 2:-<br> <input type="button" id="sub" value="Subtraction"><br>
+Division of Number 1 and Number 2:-<br><input type="button" id="div" value="Division"><br>
+Multiplication of Number 1 and Number 2:-<br><input type="button" id="x" value="Multiplication"><br>
+
+<script>
+$(document).ready( function(){
+$("#add").click(function(){ addition(); });
+$("#sub").click(function(){ substraction(); });
+$("#div").click(function(){ division(); });
+$("#x").click(function(){ multiplication(); });
+});
+function addition(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a+b;
+alert("Sum of Numbers=" + c);
+}
+function substraction(){
+var a = parseInt($("#1").val());
+
+
+var b= parseInt($("#2").val());
+var c = a-b;
+alert("Difference of Numbers=" + c);
+}
+function division(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a/b;
+alert("Division of Numbers=" + c);	
+}
+function multiplication(){
+var a = parseInt($("#1").val());
+var b= parseInt($("#2").val()); var c = a*b;
+alert("Multiplication of Numbers=" + c);
+}
+</script>
+</body>
+</html>
